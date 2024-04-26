@@ -30,7 +30,7 @@ public class Person {
     @Column(name = "email")
     private String email;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany
     @JoinTable(
             name = "person_role",
             joinColumns = @JoinColumn(name = "person_id"),
