@@ -30,7 +30,7 @@ public class StartupApplicationListener implements ApplicationListener<ContextRe
         // Проверяем наличие ролей Admin и User в базе данных, а так же root пользователя.
         Role adminRole = roleService.findByName("ROLE_ADMIN");
         Role userRole = roleService.findByName("ROLE_USER");
-        Person Admin = peopleService.userByUsername("Admin");
+        Person Admin = peopleService.userByUsername("Testuser");
 
         if (adminRole == null) {
             roleService.save(new Role("ROLE_ADMIN"));
